@@ -20,7 +20,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
-    search_fields = ('title', 'author')
+    search_fields = ('title', 'author__first_name', 'author__last_name')
 
 
 class BookInstanceAdmin(admin.ModelAdmin):
